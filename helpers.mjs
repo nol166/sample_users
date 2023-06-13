@@ -31,7 +31,7 @@ export const eqRangeQuery = async () => {
   // When would keys examined be greater than nReturned?
   // It's when MDB had to examine some index keys pointing to documents that don't match the query.
   // For example, let's filter out non-active users:
-  // db.users.find({ dob:{ $gte: new Date("1988"), $lte: new Date("1990") }. isActive: false })
+  // db.users.find({ dob:{ $gte: new Date("1988"), $lte: new Date("1990") }, inactive: false })
   const rangeQueryResult = await usersCollection
     .find({ dob: { $gte: new Date("1988"), $lte: new Date("1990") }, inactive: false })
     .explain("executionStats");
