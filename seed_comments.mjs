@@ -7,27 +7,31 @@ const uri = process.env.MDB_URI;
 const client = new MongoClient(uri);
 const userDocs = [
   {
-    dob: new Date("1987"),
-    username: "jmac",
-    isActive: false,
+    _id: ObjectId("6488bcfe84b99e26917f78b1"),
+    dob: ISODate("1987-01-01T00:00:00.000Z"),
+    username: "testAccount",
+    inactive: false,
     score: 800,
   },
   {
-    dob: new Date("1988"),
+    _id: ObjectId("6488bcfe84b99e26917f78b2"),
+    dob: ISODate("1988-01-01T00:00:00.000Z"),
     username: "exampleUser",
-    isActive: true,
+    inactive: false,
     score: 700,
   },
   {
-    dob: new Date("1989"),
+    _id: ObjectId("6488bcfe84b99e26917f78b3"),
+    dob: ISODate("1989-01-01T00:00:00.000Z"),
     username: "coolperson",
-    isActive: true,
+    inactive: true,
     score: 998,
   },
   {
-    dob: new Date("1990"),
+    _id: ObjectId("6488bcfe84b99e26917f78b4"),
+    dob: ISODate("1990-01-01T00:00:00.000Z"),
     username: "randomGuy",
-    isActive: true,
+    inactive: false,
     score: 500,
   },
 ];
