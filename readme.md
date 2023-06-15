@@ -1,12 +1,10 @@
 # Sample Users Demo
 
-This repo holds a command line demonstration of taking a query, and step by step constructing the optimal compound index for it. We start with range, then equality plus range, and finally arriving at equality, sort and then range.
-
-Along the way we encounter some of the pitfalls with indexing and use explain outputs to show the consequence of ordering compound indexes in the optimal way.
+CLI demo that runs a series of queries against a database, creates indexes, shows the explain output and provides context for what is happening and why. It uses the MongoDB Node.js driver and vanilla EJS modules.
 
 ## Purpose
 
-This was created as a way for me to wrap my head around how compound indexes work conceptually before writing the L4 script.
+This was created as a way for me to wrap my head around compound indexes and see how the order of fields within a compound index has an impact on query performance.
 
 ## Usage
 
