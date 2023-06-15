@@ -164,6 +164,8 @@ console.log(".. traversing the { inactive: 1, score: 1, dob: 1 } index backward 
 await delay(3000);
 console.log("Now the totalDocsExamined is only 2, because MDB can tell from the index entry alone that the user with dob 1989 isn't a match.")
 await delay(3000);
+
+// Step 11 - conclusion
 console.log("\nIn summary, the idea method for creating compound indexes is:");
 console.table([
   "equality tests, then ..",
